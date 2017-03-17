@@ -1,6 +1,7 @@
 # KeyedVectorsANN
 Word2Vec + ANN + Trimmed GoogleNewsVec - Fast and lightweight  
 Extension of gensim's KeyedVectors using pysparnn's ANN indexer. Depends on gensim, numpy, sklearn and scipy.  
+Also includes a utility to load GoogleNews' vector and collapse down to a manageable size.  
 Copyright (C) 2017 Hiep Huu Nguyen <ontocord@gmail.com>  
 Licensed under the GNU LGPL v2.1 - http://www.gnu.org/licenses/lgpl.html  
 See additional licenses at https://github.com/facebookresearch/pysparnn and https://radimrehurek.com/gensim/  
