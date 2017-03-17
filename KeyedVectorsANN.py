@@ -975,7 +975,7 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
         w2 = w.lower()
         if w2 != w:
             if kv.vocab.get(w2) != None and kv.vocab[w].index < kv.vocab[w2].index:
-                print (w2+"<C"+w)
+                #print (w2+"<C"+w)
                 kv.vocab[w2].index = kv.vocab[w].index
 
     vecs = []
@@ -1029,8 +1029,8 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
             w3 = ret[0][0]
             if w3 == w2:
                 ret = ret[1:]
-            if score >= 0.3:
-                print (ret, w2)
+            #if score >= 0.3:
+            #    print (ret, w2)
             # collapse compound words that are close to what is already in the vocab based on ranking
             collapse=((score >= 0.6 and idx < 250000) or (score >= 0.7 and idx < 500000) or (score >= 0.8 and idx < 1000000) or (score >= 0.9))
             if not collapse and ((score >= 0.5 and idx < 250000) or (score >= 0.6 and idx < 500000) or (score >= 0.7 and idx < 1000000) or (score >= 0.8)):
@@ -1055,7 +1055,7 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
                 if w2 != w:
                     del kv.vocab[w]
                 kv.vocab[w2] = kv.vocab[w3]
-                print (w3, "<-", w2)
+                #print (w3, "<-", w2)
             else:
                 del kv.vocab[w]
     else:
@@ -1065,4 +1065,3 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
 
     kv.save(googleFileOut)
     return kv
-
