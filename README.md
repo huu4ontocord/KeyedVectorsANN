@@ -8,8 +8,7 @@ See additional licenses at https://github.com/facebookresearch/pysparnn and http
 
 TODO: Extend gensim's word2vec to use KeyedVectorsANN. 
 
-Creating the model based on Google News' 3,000,000 word vectors.
-Results in a vocab of ~16K words with an additional ~44K "synonyms" of compound words.
+YOu can create the model based on Google News' 3,000,000 word vectors. This will result in a vocab of ~16K words with an additional ~44K "synonyms" of compound words.  
 
 Model creation:
 
