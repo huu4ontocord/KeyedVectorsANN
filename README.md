@@ -17,7 +17,6 @@ import gensim, time
 from KeyedVectorsANN import *
 
 t = time.time()    
-#assumes you have already created the ANN file by calling:
 kv = prepareANNModel("./nativedata/GoogleNews-vectors-negative300.bin", "GoogleNewsANN.bin", createSynonyms=True)
 print ("finished creating model ...", time.time() - t, "seconds")        
 
