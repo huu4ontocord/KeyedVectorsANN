@@ -7,7 +7,8 @@ See additional licenses at https://github.com/facebookresearch/pysparnn and http
 
 
 Usage:
-import gensim
+
+~~~ import gensim
 from KeyedVectorsANN import *
 # assumes you have already created the ANN file by calling:
 # kv = prepareANNModel("./nativedata/GoogleNews-vectors-negative300.bin", "GoogleNewsANN.bin", createSynonyms=True)
