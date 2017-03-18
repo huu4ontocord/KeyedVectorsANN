@@ -1,7 +1,8 @@
 # KeyedVectorsANN
 Genism word2vec + Pysparnn ANN + Trimmed GoogleNewsVec = Fast and lightweight NLP tool  
-Extension of gensim's KeyedVectors using pysparnn's approximate nearest neighber indexer. Depends on gensim, numpy, sklearn and scipy.  
-Also includes a utility to load Google News' vector and collapse down to a manageable size.  
+This software is an extension of gensim's KeyedVectors using pysparnn's approximate nearest neighber indexer. It depends on gensim, numpy, sklearn and scipy.  
+It also includes a utility to load Google News' vector and collapse down to a manageable size.  
+
 Copyright (C) 2017 Hiep Huu Nguyen <ontocord@gmail.com>  
 Licensed under the GNU LGPL v2.1 - http://www.gnu.org/licenses/lgpl.html  
 See additional licenses at https://github.com/facebookresearch/pysparnn and https://radimrehurek.com/gensim/  
