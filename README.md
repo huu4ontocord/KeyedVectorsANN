@@ -5,7 +5,9 @@ Also includes a utility to load Google News' vector and collapse down to a manag
 Copyright (C) 2017 Hiep Huu Nguyen <ontocord@gmail.com>  
 Licensed under the GNU LGPL v2.1 - http://www.gnu.org/licenses/lgpl.html  
 See additional licenses at https://github.com/facebookresearch/pysparnn and https://radimrehurek.com/gensim/  
+
 Download the the google vector file from here: https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit  
+
 TODO: Extend gensim's word2vec to use KeyedVectorsANN. Refactor to use the pysparnn module when compatible.  
 
 You can create the model based on Google News' 3,000,000 word vectors. This will result in a vocab of ~16K words with an additional ~44K "synonyms" of compound words.  
