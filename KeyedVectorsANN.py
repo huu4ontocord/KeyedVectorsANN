@@ -577,7 +577,7 @@ class ClusterIndex(object):
         for x in records:
             flat_rec.extend(x)
 
-        if feature != None and record != None:
+        if feature is not None and record is not None:
             features.append(feature)
             flat_rec.append(record)
 
@@ -956,7 +956,7 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
     names1 = kv.index2word
 
     # for words with different cases, use the word with the highest
-    # count, assuming index2word is ordered from greatest to lease.
+    # count, assuming index2word is ordered from greatest to least.
     # also trim out words that can't be saved as ascii.  TODO -
     # collapse all websites into a protoypical website vector, and
     # similar with emails
@@ -974,7 +974,7 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
             continue
         w2 = w.lower()
         if w2 != w:
-            if kv.vocab.get(w2) != None and kv.vocab[w].index < kv.vocab[w2].index:
+            if kv.vocab.get(w2) is not None and kv.vocab[w].index < kv.vocab[w2].index:
                 #print (w2+"<C"+w)
                 kv.vocab[w2].index = kv.vocab[w].index
 
@@ -1021,7 +1021,7 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
             vec = wVec[1]
             idx = wVec[2]
             w2 = w.lower()
-            if (not w.islower()) and kv.vocab.get(w2) != None:
+            if (not w.islower()) and kv.vocab.get(w2) is not None:
                 del kv.vocab[w]
                 continue
             ret = cluster_index.most_similar(vec, k_clusters=1) # just do a fast but lower accuracy search
@@ -1065,3 +1065,4 @@ def prepareANNModel(googleFileIn, googleFileOut, createSynonyms=True):
 
     kv.save(googleFileOut)
     return kv
+
